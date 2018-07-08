@@ -1,0 +1,101 @@
+body {
+	width: 100%;
+	margin: 0px;
+	background-image: url(../img/twitter.png);
+	background-size: 100%;
+	font-family: "Segoe UI", sans-serif;
+
+}
+
+header {
+	background-color: white;
+	border-bottom: 3px solid #8c8c8c;
+}
+
+h1 {
+	color: #1da1f2;
+	text-align: center;
+	margin: 0px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 900;
+}
+
+.info {
+	background-color: white;
+	height: 130px;
+	width: 200px;
+	padding-top: 0px;
+	padding-left: 15px;
+	box-shadow: 2px 2px 10px #5b5b5b;
+	border-radius: 5px;
+}
+
+.teste {
+	border: 2px solid orange;
+}
+
+.twittar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+form {
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+	height: 110px;
+	background-color: white;
+	padding: 10px;
+	box-shadow: 2px 2px 10px #5b5b5b;
+	border-radius: 5px;
+	width: 300px;
+	justify-content: space-between
+}
+
+#buttonTwittar {
+	width: 90px;
+	height: 25px;
+	color: white;
+	border: none;
+	background-color: #1da1f2;
+	border-radius: 10px;
+	font-weight: 900;
+}
+
+#welcome {
+	font-weight: 600;
+}
+
+#message {
+	box-sizing: 100px;
+	border: none;
+}
+
+#buttonCounter {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #CCC;
+	padding-top: 5px;
+}
+
+#twitters {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.post {
+	width: 550px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	height: auto;
+	padding: 10px;
+	margin-top: 20px;
+
+}
