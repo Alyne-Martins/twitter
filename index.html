@@ -24,11 +24,11 @@
 			<p id="counterTweets">0</p>
 		</div>
 		<form>
-			<input type="textarea" id="message" placeholder="O que está acontecendo?">
+			<input type="textarea" id="message" placeholder="O que está acontecendo?" onchange="ableBtn()">
 
 			<div id="buttonCounter">
-				<span id="counterMessage">0</span>
-				<button type="submit" id="buttonTwittar" onclick="twittar()">Tweetar</button>
+				<span id="counterMessage">140</span>
+				<button type="submit" id="buttonTwittar" onclick="twittar()" disabled="disabled" class="buttonDisable">Tweetar</button>
 			</div>
 
 		</form>

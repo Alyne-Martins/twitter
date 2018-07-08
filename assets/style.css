@@ -57,12 +57,22 @@ form {
 	justify-content: space-between
 }
 
-#buttonTwittar {
+.buttonDisable {
 	width: 90px;
 	height: 25px;
 	color: white;
 	border: none;
+	background-color: #ccc;
+	border-radius: 10px;
+	font-weight: 900;
+}
+
+.buttonAble {
 	background-color: #1da1f2;
+	width: 90px;
+	height: 25px;
+	color: white;
+	border: none;
 	border-radius: 10px;
 	font-weight: 900;
 }
@@ -98,4 +108,8 @@ form {
 	padding: 10px;
 	margin-top: 20px;
 
+}
+
+#counterMessage {
+	font-weight: 700;
 }
