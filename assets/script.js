@@ -5,20 +5,37 @@ var button = document.getElementById("buttonTwittar");
 
 function twittar() {
 	var message = document.getElementById("message").value;
+	message.trim();
+	console.log(message.length);
+	if (message.length == "") {
+		document.getElementById('buttonTwittar').disabled = true;
+		button.removeAttribute("class", "buttonAble");
+		document.getElementById('counterMessage').innerHTML = 140;
 
+	}
 	var exibir = document.querySelector("#twitters");
 	var div = document.createElement("div");
 	div.setAttribute("class", "post");
 	div.innerHTML = message;
 	exibir.appendChild(div);
 	event.preventDefault();
+	hora();
 	clean.value = "";
 	counterTweets = counterTweets + 1;
 	document.getElementById("counterTweets").innerHTML = counterTweets;
+	document.getElementById('counterMessage').style.color = "#000000";
+
+
+	function hora() {
+		var p = document.createElement("p");
+		hora = Date();
+		p.setAttribute("class", "postDate");
+		p.innerHTML = hora;
+		div.appendChild(p);
+	}
 	if (!document.getElementById('buttonTwittar').disabled)
 		document.getElementById('buttonTwittar').disabled = true;
 	button.removeAttribute("class", "buttonAble");
-
 	document.getElementById('counterMessage').innerHTML = 140;
 }
 
@@ -44,8 +61,12 @@ function caracter() {
 	if (caracter > 0 && caracter <= 10) {
 		document.getElementById('counterMessage').style.color = "#ffa100";
 	}
-
 	if (caracter >= 11 && caracter <= 20) {
 		document.getElementById('counterMessage').style.color = "#1da1f2";
 	}
+
+	if (caracter >= 21) {
+		document.getElementById('counterMessage').style.color = "#000000";
+	}
+
 }
