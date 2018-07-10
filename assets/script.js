@@ -1,48 +1,48 @@
-var clean = document.getElementById("message");
+var box = document.getElementById("message");
 var counterTweets = 0;
 var button = document.getElementById("buttonTwittar");
+
+box.addEventListener('input', boxHeight);
 
 
 function twittar() {
 	var message = document.getElementById("message").value;
-	message.trim();
-	console.log(message.length);
-	if (message.length == "") {
+	if (message.length == "" || message.trim() === "") {
 		document.getElementById('buttonTwittar').disabled = true;
 		button.removeAttribute("class", "buttonAble");
 		document.getElementById('counterMessage').innerHTML = 140;
 
 	}
-	var exibir = document.querySelector("#twitters");
+	var display = document.querySelector("#twitters");
 	var div = document.createElement("div");
 	div.setAttribute("class", "post");
 	div.innerHTML = message;
-	exibir.appendChild(div);
-	event.preventDefault();
-	hora();
-	clean.value = "";
+	display.appendChild(div);
+	hour();
+	box.value = "";
 	counterTweets = counterTweets + 1;
 	document.getElementById("counterTweets").innerHTML = counterTweets;
 	document.getElementById('counterMessage').style.color = "#000000";
 
 
-	function hora() {
+	function hour() {
 		var p = document.createElement("p");
-		hora = Date();
+		hour = Date();
 		p.setAttribute("class", "postDate");
-		p.innerHTML = hora;
+		p.innerHTML = hour;
 		div.appendChild(p);
 	}
+
 	if (!document.getElementById('buttonTwittar').disabled)
 		document.getElementById('buttonTwittar').disabled = true;
 	button.removeAttribute("class", "buttonAble");
 	document.getElementById('counterMessage').innerHTML = 140;
+	event.preventDefault();
 }
 
 function ableBtn() {
 
 	var message = document.getElementById("message").value;
-
 	if (message.length >= 1) {
 		if (document.getElementById('buttonTwittar').disabled) document.getElementById('buttonTwittar').disabled = false;
 		button.setAttribute("class", "buttonAble");
@@ -68,5 +68,10 @@ function caracter() {
 	if (caracter >= 21) {
 		document.getElementById('counterMessage').style.color = "#000000";
 	}
+}
 
+function boxHeight() {
+	if (box.scrollHeight > box.offsetHeight) {
+		box.rows += 1;
+	}
 }
