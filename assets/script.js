@@ -7,12 +7,7 @@ box.addEventListener('input', boxHeight);
 
 function twittar() {
 	var message = document.getElementById("message").value;
-	if (message.length == "" || message.trim() === "") {
-		document.getElementById('buttonTwittar').disabled = true;
-		button.removeAttribute("class", "buttonAble");
-		document.getElementById('counterMessage').innerHTML = 140;
 
-	}
 	var display = document.querySelector("#twitters");
 	var div = document.createElement("div");
 	div.setAttribute("class", "post");
@@ -23,7 +18,6 @@ function twittar() {
 	counterTweets = counterTweets + 1;
 	document.getElementById("counterTweets").innerHTML = counterTweets;
 	document.getElementById('counterMessage').style.color = "#000000";
-
 
 	function hour() {
 		var p = document.createElement("p");
@@ -41,11 +35,16 @@ function twittar() {
 }
 
 function ableBtn() {
-
 	var message = document.getElementById("message").value;
 	if (message.length >= 1) {
 		if (document.getElementById('buttonTwittar').disabled) document.getElementById('buttonTwittar').disabled = false;
 		button.setAttribute("class", "buttonAble");
+	}
+	if (message.length == "" || !message.trim()) {
+		document.getElementById('buttonTwittar').disabled = true;
+		button.removeAttribute("class", "buttonAble");
+		document.getElementById('counterMessage').innerHTML = 140;
+
 	}
 }
 

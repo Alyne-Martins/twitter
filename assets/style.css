@@ -94,7 +94,7 @@ form {
 	resize: none;
 	overflow: hidden;
 	height: auto;
-
+	word-wrap: break-word;
 }
 
 #buttonCounter {
@@ -118,7 +118,6 @@ form {
 	height: auto;
 	padding: 10px;
 	margin-top: 20px;
-
 }
 
 #counterMessage {
