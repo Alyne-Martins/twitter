@@ -13,7 +13,7 @@ Projeto hospedado no git pages: https://alyne-martins.github.io/twitter/
 #### Versão 0.0.1 
 
 - um formulário que permita inserir um texto e um botão para "twittar".
-- postar texto ao HTML.
+- Postar mensagem.
 
 #### Versão 0.0.2
 
